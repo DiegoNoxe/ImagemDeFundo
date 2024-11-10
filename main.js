@@ -1,4 +1,8 @@
+//Declarando variaveis
+
+let i = 0; let j = 0;
 const btd = document.getElementById('btd');
+const clique = document.getElementById('clique');
 const images = 
 [
     'img/img1.jpg',
@@ -12,10 +16,12 @@ const images =
     'img/img9.jpg'
 ];
 
-let i = 0;
+//Fim da declaração de variaveis
 
+//Criando a função para a alteração de imagem
 btd.addEventListener("click", function (e) {
     e.preventDefault(); 
+    clique.innerHTML = `${j++}`;
     document.body.style.backgroundImage = `url(${images[i]})`;
     i++;
     if(i >= images.length)
@@ -23,3 +29,5 @@ btd.addEventListener("click", function (e) {
         i = 0;
     }
   });
+
+//Fim da função
